@@ -1,0 +1,70 @@
+/* Blue screen with no content */
+.container {
+    background-color: #006D77;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Logo: Grow and Turn animation */
+  .logo-container {
+    animation: growAndTurn 1.5s forwards;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  @keyframes growAndTurn {
+    0% {
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  
+  /* Company Name: Split animation */
+  .companyName {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Manrope, sans-serif';
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: splitText 1.5s forwards 2s; /* Delayed to show after the logo */
+  }
+  
+  @keyframes splitText {
+    0% {
+      opacity: 0;
+      letter-spacing: -30px;
+    }
+    100% {
+      opacity: 1;
+      letter-spacing: normal;
+    }
+  }
+  
+  /* Highlighted text color */
+  .highlight {
+    color: #fdd835;
+  }
+  
+  /* Tagline: No animation */
+  .tagline {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: #DCDBE0;
+    font-family: 'Manrope';
+    text-align: center;
+    height: 40px;
+    width: 280px;
+  }

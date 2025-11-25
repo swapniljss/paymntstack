@@ -1,0 +1,422 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 0rem 0rem;
+  text-align: center;
+}
+
+.MainContainer {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px 0px;
+  padding: 16px 0px;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  /* background-color: rgb(230, 248, 248); */
+}
+
+.MainContainer .DocumnetFormCont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border: 1px solid red; */
+  margin: 0px 0px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 2rem;
+  box-sizing: border-box;
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeader .DocumentHeadingText {
+  flex: 1;
+  text-align: center;
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeader .PaymntStackLogo {
+  margin-left: auto;
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeader .PaymntStackLogo img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.DocumentHeader p {
+  color: black;
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32.4px;
+  margin: 0px 0px;
+}
+
+.MainContainer .DocumnetFormCont .PagesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.MainContainer .DocumnetFormCont .PagesContainer button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Manrope", "Poppins";
+  color: #15141f;
+  background-color: #f9f9fa;
+}
+
+.MainContainer .DocumnetFormCont .PagesContainer .active {
+  background-color: #ffc700;
+  color: #006d77;
+  font-weight: 700;
+  font-family: "Manrope", "sans-serif";
+}
+
+.MainContainer .DocumnetFormCont .PagesContainer .done {
+  background-color: #006d77;
+  color: #ffc700;
+  font-weight: 700;
+  font-family: "Manrope", "sans-serif";
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeadingTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainContainer .DocumnetFormCont .DocumentHeadingTitle p {
+  color: black;
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32.4px;
+  margin: 0px 0px;
+}
+
+.MainContainer .DocumnetFormCont .ButtonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 1px solid rebeccapurple; */
+  /* margin-top: auto; */
+  /* padding-bottom: 1rem; */
+}
+
+.MainContainer .DocumnetFormCont .ButtonContainer button {
+  width: 8rem;
+  height: 2.5rem;
+  background-color: #006d77;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.MainContainer .DocumnetFormCont .FormContainer {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* adhar kyc */
+.uniqueUploadDocLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.uniqueUploadAdhaarDocLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.uniqueUploadDocLabel label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+  background: #f9f9fa;
+  width: 311px;
+  height: 56px;
+}
+
+.uniqueUploadDocLabel label:nth-child(4) {
+  border-radius: 16px;
+}
+
+.uniqueUploadDocLabel p {
+  color: #a2a0a8;
+}
+
+/* adhar down pic */
+.uniqueUploadedDoc {
+  display: flex;
+  gap: 16px;
+}
+.uniqueAadharUploadedDoc {
+  display: flex;
+  gap: 16px;
+}
+
+.uniqueUploadedDoc img {
+  background: #f9f9fa;
+  width: 149px;
+  height: 97px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.uniqueAadharUploadedDoc img {
+  background: #f9f9fa;
+  width: 149px;
+  height: 97px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .MainContainer {
+    height: 100vh !important;
+    width: 100vw;
+    margin: 0px 0px;
+    padding: 16px 0px;
+    box-sizing: border-box;
+    /* overflow-y: auto !important; */
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .MainContainer .DocumnetFormCont {
+    height: 100% !important;
+  }
+
+  /* .DocumentHeader- On Boarding Verification,PaymntStackLogo */
+
+  .MainContainer .DocumnetFormCont .DocumentHeader {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  /* .PagesContainer- pagination; */
+  .MainContainer .DocumnetFormCont .PagesContainer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+  }
+
+  .uniqueUploadAdhaarDocLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+  }
+  .uniqueUploadAdhaarDocLabel label {
+    justify-content: space-between;
+    width: 260px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    gap: 8px;
+    background: rgb(249, 249, 250);
+  }
+  /* .UploadCompanyVerify- 2 parts- complete form
+ CertificateContainer->
+ (.UploadDocContainer->(uploadDocLabel, uploadedDoc)), 
+ FormContainerItem -(right side, company name.etc,,,) */
+
+  .UploadCompanyVerify form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* skip */
+  .UploadCompanyVerify .VerificationContainer {
+    display: flex;
+    flex-direction: column; /* Ensures MOA is above AOA */
+    gap: 20px; /* Add some space between MOA and AOA */
+  }
+  /* skip */
+
+  .MainContainer .DocumnetFormCont .FormContainer {
+    border: 1.5px solid rgb(51, 153, 53);
+    height: auto !important;
+    /* overflow-y: auto;  */
+    /* max-height: 70vh;  */
+    /* flex-grow: 1 !important; */
+    gap: 4px;
+  }
+
+  .UploadCompanyVerify form .CertificateContainer {
+    border: 1px solid rgb(153, 51, 112);
+  }
+
+  .UploadCompanyVerify {
+    width: 100% !important;
+  }
+
+  .UploadDocContainer .uploadDocLabel {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 63% !important;
+    height: 10% !important;
+    background-color: #f9f9fa !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px !important;
+  }
+
+  .UploadCompanyVerify form .CertificateContainer .UploadDocContainer {
+    border: 5px solid burlywood;
+    height: 40vh;
+    /* overflow-y: auto; */
+    border: 4px solid red;
+  }
+
+  .MainContainer .DocumnetFormCont .ButtonContainer {
+    border: 1px solid red;
+    /* margin-top: auto !important;  */
+    /* margin-top: 210px !important; */
+    padding-bottom: 0.5rem;
+  }
+
+  /* for kyc complete */
+  /* Apply these styles for screens smaller than 768px */
+  @media screen and (max-width: 767px) {
+    .KycCompleteContainer {
+      padding-top: 100px;
+      margin-top: 40px; /* Adjust the value to move the image downwards */
+    }
+  }
+}
+
+/* adhar kyc */
+@media only screen and (max-width: 768px) {
+  .uniqueUploadDocLabel {
+    gap: 0px; /* Adjust the gap for smaller screens */
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  .uniqueUploadDocLabel label {
+    width: 311px; /* Make the label take full width */
+    height: 56px; /* Reduce height for better fit on smaller screens */
+    gap: 4px !important; /* Reduce the gap between elements */
+  }
+
+  .uniqueUploadDocLabel p {
+    font-size: 14px; /* Adjust the font size for mobile */
+  }
+}
+
+.UploadCompanyVerify form .VerificationContainer .UploadDocContainer {
+  height: 40vh !important;
+  width: 100% !important;
+}
+
+/* adhar pic down */
+@media only screen and (max-width: 768px) {
+  .uniqueUploadedDoc {
+    gap: 0px; /* Reduced gap for smaller screens */
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  .uniqueUploadedDoc img {
+    width: 149px; /* Keep the width for mobile as specified */
+    height: 97px; /* Keep the height for mobile as specified */
+    border-radius: 12px 0px 0px 0px; /* Border-radius for the top-left corner */
+    border-width: 0.75px 0px 0px 0px; /* Apply border width to the top */
+    border-style: solid; /* Ensure border is visible */
+    border-color: #000; /* Change this to the desired border color */
+    border: 2px solid black;
+  }
+
+  .uniqueUploadedDoc {
+    border: 2px solid black !important;
+    width: 100vw; /* Keep the width for mobile as specified */
+    height: 100px;
+  }
+  .UploadCompanyVerify form .VerificationContainer .UploadDocContainer {
+    width: 100% !important;
+  }
+  .uniqueAadharUploadedDoc {
+    gap: 0px; /* Reduced gap for smaller screens */
+    margin-left: auto;
+    margin-bottom: auto;
+    justify-content: center;
+    border: 2px solid black !important;
+    width: 100vw; /* Keep the width for mobile as specified */
+    height: 100px;
+  }
+  .uniqueAadharUploadedDoc img {
+    width: 149px; /* Keep the width for mobile as specified */
+    height: 97px; /* Keep the height for mobile as specified */
+    border-radius: 12px 0px 0px 0px; /* Border-radius for the top-left corner */
+    border-width: 0.75px 0px 0px 0px; /* Apply border width to the top */
+    border-style: solid; /* Ensure border is visible */
+    border-color: #000; /* Change this to the desired border color */
+    border: 2px solid black;
+  }
+}
+
+/* moa and Aoa */
+/* .VerificationContainermoaaoa {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.UploadDocContainermoaaoa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+} */
+
+/* Web responsiveness */
+/* @media (min-width: 768px) {
+  .VerificationContainer {
+      flex-direction: row;
+  }
+
+  .UploadDocContainermoaaoa {
+      flex-direction: column;
+      align-items: center;
+  }
+} */
+
+/* Mobile responsiveness */
+/* @media (max-width: 767px) {
+  .VerificationContainermoaaoa {
+      flex-direction: column;
+      overflow-y: scroll;
+      height: 100vh; /* Adjust height as necessary */
+/* } */
+
+/* .UploadDocContainermoaaoa {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: auto;
+  } */
+/* } */

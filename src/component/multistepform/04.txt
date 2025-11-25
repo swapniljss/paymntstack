@@ -1,0 +1,45 @@
+<div className='UploadDocContainer'>
+    <div className='uploadDocLabelMoa'>
+        <label
+            htmlFor="MoaFileUpload"
+            style={{ display: 'flex', alignItems: 'center', gap: '8px', width: "100%"}}
+            onClick={openMoaFileDialog}
+        >
+            <p style={{ color: '#A2A0A8' }}>Upload MOA</p>
+            <img src={UploadIcon} alt="Upload" />
+        </label>
+        <input
+            type="file"
+            id="MoaFileUpload"
+            ref={moaInputFile}
+            style={{ display: 'none' }}
+            onChange={handleMoaInputDoc}
+        />
+    </div>
+    <div className='uploadedDocMoa'>
+        {moaDocUrl && <img src={moaDocUrl} alt="MOA Document" />}
+    </div>
+</div>
+
+<div className='UploadDocContainer'>
+    <div className='uploadDocLabelAoa'>
+        <label
+            htmlFor="AoaFileUpload"
+            style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+            onClick={openAoaFileDialog}
+        >
+            <p style={{ color: '#A2A0A8' }}>Upload AOA</p>
+            <img src={UploadIcon} alt="Upload" />
+        </label>
+        <input
+            type="file"
+            id="AoaFileUpload"
+            ref={aoaInputFile}
+            style={{ display: 'none' }}
+            onChange={handleAoaInputDoc}
+        />
+    </div>
+    <div className='uploadedDocAoa'>
+        {aoaDocUrl && <img src={aoaDocUrl} alt="AOA Document" />}
+    </div>
+</div>

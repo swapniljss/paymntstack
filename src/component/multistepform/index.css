@@ -1,0 +1,149 @@
+.UploadCompanyVerify {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  /* height: 55vh; */
+}
+
+.UploadCompanyVerify form {
+  display: flex;
+  flex-direction: row;
+  /* Align children (CertificateContainer and FormContainer) side by side */
+  gap: 20px;
+  /* Space between CertificateContainer and FormContainer */
+  width: 100%;
+  /* Ensure the form takes full width of container */
+}
+
+.UploadCompanyVerify form .CertificateContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Space between file input and uploaded file container */
+  flex: 1;
+  height: 55vh;
+}
+
+.UploadCompanyVerify form .CertificateContainer input[type="file"] {
+  padding: 5px;
+}
+
+.UploadCompanyVerify form .UploadedFileCont {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Center content within this container */
+}
+
+.UploadCompanyVerify form .FormContainerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+/* Updated to make the GST form elements column-wise */
+.UploadCompanyVerify form .FormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+/* .UploadCompanyVerify form input[type='text'] {
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    width: 16rem;
+} */
+.custom-placeholder input::placeholder {
+  font-size: 12px;
+  /* Adjust placeholder text size */
+}
+
+.UploadDocContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.UploadAadhaarDocContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.UploadDocContainer .uploadDocLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: column;
+  width: 50%;
+  height: 10%;
+  background-color: npm #f9f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.UploadDocContainer .uploadDocLabel p {
+  font-size: 14px;
+  flex-direction: column !important;
+}
+
+.UploadDocContainer .uploadDocLabel img {
+  height: 14px;
+}
+
+.UploadDocContainer .uploadedDoc {
+  width: 50%;
+  height: 100%;
+  background-color: #f9f9fa;
+  border-radius: 8px;
+}
+
+.UploadDocContainer .uploadedDoc img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.UploadCompanyVerify form .AoaVerifyCont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.UploadCompanyVerify form .AoaVerifyCont .UploadDocContainer {
+  height: 50vh;
+  width: 50%;
+}
+
+.MultistepBtn:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Moa and AOA separate  */
+
+.UploadCompanyVerify form .VerificationContainer {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 55vh !important;
+}
+
+.UploadCompanyVerify form .VerificationContainer .UploadDocContainer {
+  height: 40vh !important;
+  width: 50% !important;
+}
