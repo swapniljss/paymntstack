@@ -4,8 +4,6 @@ import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import VideoKyc from './component/multistepform/VideoKyc';
 
-
-
 function App() {
   return (
     <>
@@ -13,8 +11,6 @@ function App() {
         <Route path="/" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/video-kyc" element={<VideoKyc />} /> 
-
-
       </Routes>
     </>
   );
