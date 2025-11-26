@@ -4,7 +4,7 @@ import './App.css';
 import HelloUser from './Pages/Login/HelloUser';
 import Registration from './Pages/Registration';
 import VideoKyc from './component/multistepform/VideoKyc';
-
+import VerifyDetails from './component/multistepform/VerifyDetails';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<HelloUser />} />
         <Route path="/forms" element={<Registration />} />
         <Route path="/video-kyc" element={<VideoKyc />} />
+        <Route path='verifydetails' element={<VerifyDetails/>} />
       </Routes>
     </>
   );

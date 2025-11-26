@@ -1,0 +1,131 @@
+/* Scope */
+.verify-container {
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* Typography */
+.verify-container h1,
+.verify-container p,
+.verify-container label,
+.verify-container span,
+.verify-container button {
+  font-family: 'Manrope', sans-serif;
+}
+
+.verify-container h1 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.verify-container p {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Details */
+.verify-container .details-container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.verify-container .detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #000;
+}
+
+.verify-container .detail-item span {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Checkbox */
+.verify-container .checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.verify-container .checkbox-container input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.verify-container .checkbox-container label {
+  font-size: 14px;
+  color: #000;
+}
+
+/* Support text */
+.verify-container .support-text {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Buttons */
+.verify-container .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+}
+
+.verify-container button {
+  border: none;
+  cursor: pointer;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.verify-container .back-button {
+  background: #f8f9fa;
+  color: #006d77;
+  width: 45%;
+}
+
+.verify-container .next-button {
+  background: #006d77;
+  color: #fff;
+  width: 45%;
+}
+
+.verify-container .next-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .verify-container .detail-item {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .verify-container .detail-item {
+    width: 90%;
+  }
+}

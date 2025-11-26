@@ -160,3 +160,15 @@ input::placeholder{color:var(--gray);}
   .description{font-size:.8rem;bottom:5px;}
   h1{font-size:40px;}
 }
+
+
+input {
+  color: #000 !important;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #000;
+}
