@@ -1,16 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login from './Pages/Login';
+
+import HelloUser from './Pages/Login/HelloUser';
 import Registration from './Pages/Registration';
 import VideoKyc from './component/multistepform/VideoKyc';
+
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/video-kyc" element={<VideoKyc />} /> 
+        <Route path="/" element={<HelloUser />} />
+        <Route path="/forms" element={<Registration />} />
+        <Route path="/video-kyc" element={<VideoKyc />} />
       </Routes>
     </>
   );

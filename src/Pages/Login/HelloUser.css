@@ -1,271 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
-
-/* Main Container */
-.login-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-  }
-  
- 
-  
-/* Left Section - Background with Logo and Description */
-.left-section {
-  flex: 1;
-  background-color: #006D77; /* Set the background color */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 0px;
-  position: relative; /* Required to position the description text at the bottom */
-  box-sizing: border-box;
-   /* border: 1.5px solid red; */
-   margin: 0px 0px;
+:root {
+  --primary:#006D77;
+  --secondary:#FFC700;
+  --gray:#adb5bd;
+  --border:#ccc;
 }
 
-
-/* Center the Logo */
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+/* Layout */
+.login-container{
+  display:flex;
+  height:100vh;
+  width:100vw;
 }
 
-.company-name{
-  font-size: 22px;
-  font-family: 'manrope';
+/* Left */
+.left-section{
+  flex:1;
+  background:var(--primary);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 }
 
-.paymnt{
-  color: white;
+.logo-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-.stack{
-  color: #FFC700;
+.company-logo{
+  width:150px;
+  margin-bottom:20px;
 }
+
+.company-name{font-size:22px;font-family:Manrope;}
+.paymnt{color:#fff;}
+.stack{color:var(--secondary);}
 
 .description{
-  font-family: 'Manrope';
-  color: #DCDBE0;
+  font-family:Manrope;
+  font-size:1rem;
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  padding:0 15px;
+  text-align:center;
+  color:#fff;
 }
 
-/* Style for Company Logo */
-.company-logo {
-  width: 150px; /* Adjust width as needed */
-  height: auto;
-  margin-bottom: 20px; /* Space between logo and description */
+/* Right */
+.right-section{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
 }
 
-/* Description text at the bottom */
-.description {
-  color: #ffffff; /* White text color */
-  font-size: 1rem;
-  text-align: center;
-  position: absolute;
-  bottom: 20px; /* Position the text at the bottom */
-  width: 100%;
-  padding: 0 15px; /* Responsive padding */
-  box-sizing: border-box;
+.form-container{text-align:center;width:100%;}
+
+/* Headings */
+h1{
+  font-family:'Amatic SC',cursive;
+  font-size:50px;
+  font-weight:700;
+  color:#023b6a;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .company-logo {
-      width: 100px; /* Adjust logo size for smaller screens */
-  }
-
-  .description {
-      font-size: 0.9rem; /* Adjust text size for smaller screens */
-      bottom: 10px; /* Adjust position for smaller screens */
-  }
+h2{
+  font-family:Manrope;
+  font-size:20px;
+  font-weight:200;
+  color:grey;
 }
 
-@media (max-width: 480px) {
-  .company-logo {
-      width: 80px; /* Further adjust logo size for very small screens */
-  }
-
-  .description {
-      font-size: 0.8rem; /* Further adjust text size for very small screens */
-      bottom: 5px; /* Adjust position for very small screens */
-  }
+/* Input */
+.input-group{
+  display:flex;
+  align-items:center;
+  padding:15px;
+  background:#f8f9fa;
+  border-radius:10px;
+  border:1px solid var(--border);
+  width:50%;
+  max-width:300px;
+  margin:0 auto 20px;
+  position:relative;
 }
 
-  .company-image {
-    width: 100%;
-    height: 100%; /* Adjust size of the company logo */
-  }
-  
-/* Right Section - Form */
-.right-section {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+input{
+  border:none;
+  flex:1;
+  font-size:16px;
+  background:transparent;
 }
 
-.form-container {
-  text-align: center;
-  width: 100%;
-}
+input::placeholder{color:var(--gray);}
 
-h1 {
-  font-family: 'Amatic SC', cursive;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 60px;
-  text-align: center;
-  color: #023b6a;
-}
-
-h2 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 20px;
-  font-weight: 200;
-  text-align: center;
-  color: grey;
-}
-
-/* Input Group for Modern Label Style */
-.input-group {
-  display: flex;
-  align-items: center;
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  width: 50%; /* Adjust input group to half the width */
-  max-width: 300px; /* Optional: Limit the max width on larger screens */
-  margin-left: auto; /* Center input field */
-  margin-right: auto; /* Center input field */
-  position: relative; 
-}
-
-
-.icon {
-  color: #adb5bd;
-  margin-right: 10px;
-}
-
-input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  flex-grow: 1;
-  font-size: 16px;
-  color: #000;
-}
-
-/* Style for the input placeholders */
-input::placeholder {
-  color: #adb5bd;
-  font-size: 16px;
-}
+.icon{color:var(--gray);margin-right:10px;}
 
 .toggle-icon{
-  color: #adb5bd;
-  position: absolute; /* Ensures the icon is positioned inside the input field */
-  right: 10px; /* Align it to the right of the input */
-  top: 50%; /* Center the icon vertically */
-  transform: translateY(-50%); /* Center the icon vertically */
+  color:var(--gray);
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
 }
 
-/* Forgot password link */
-.forgot-password {
-  text-align: right;
-  width: 50%; /* Match width with input field */
-  max-width: 300px; /* Match max-width with input field */
-  margin-top: -15px; /* Adjust to move it closer to the input */
-  margin-bottom: 20px; /* Add space after it */
-  margin-left: auto;
-  margin-right: auto; /* Center the link */
+/* Forgot password */
+.forgot-password{
+  width:50%;
+  max-width:300px;
+  margin:-10px auto 20px;
+  text-align:right;
+}
+.forgot-password a{
+  color:var(--primary);
+  text-decoration:none;
 }
 
-.forgot-password a {
-  color: #006D77;
-  font-size: 16px;
-  text-decoration: none;
+/* Button */
+.login-button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  padding:10px 88px;
+  width:50%;
+  max-width:300px;
+  margin:15px auto 0;
+  display:block;
+}
+.login-button:hover{background:#008489;}
+
+.signup-link{
+  font-size:16px;
+  color:#6c757d;
+  margin-top:10px;
+}
+.signup-link a{
+  color:var(--primary);
+  font-weight:bold;
+  text-decoration:none;
 }
 
-/* Signup link */
-.signup-link {
-  font-size: 16px;
-  text-align: center;
-  color: #6c757d;
-  margin-top: 10px;
+/* Responsive */
+@media(max-width:768px){
+  .left-section{display:none;}
+  .company-logo{width:100px;}
+  .description{font-size:.9rem;bottom:10px;}
 }
 
-.signup-link a {
-  color: #006D77;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/** Login button */
-.login-button {
-  background-color: #006D77;
-  color: white;
-  padding: 10px 88px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-  width: 50%; /* Adjust login button to half the width */
-  max-width: 300px; /* Optional: Limit the max width on larger screens */
-  margin-left: auto; /* Center button */
-  margin-right: auto; /* Center button */
-}
-.login-button:hover {
-  background-color: #008489;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .left-section {
-    display: none; /* Hide the left section */
-  }
-
-  .h1{
-    font-family: 'manrope';
-  }
-
-  .right-section {
-    flex: 1;
-    width: 100%; /* Make the right section take full width */
-    background-color: rgb(255, 255, 255);
-  }
-
-  .company-logo {
-      width: 100px; /* Adjust logo size for smaller screens */
-  }
-
-  .description {
-      font-size: 0.9rem; /* Adjust text size for smaller screens */
-      bottom: 10px; /* Adjust position for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .company-logo {
-      width: 80px; /* Further adjust logo size for very small screens */
-  
-  
-  }
-
-  .description {
-      font-size: 0.8rem; /* Further adjust text size for very small screens */
-      bottom: 5px; /* Adjust position for very small screens */
-  }
-
-  .h1{
-    font-family: 'manrope';
-    font-size: 10px;
-  }
+@media(max-width:480px){
+  .company-logo{width:80px;}
+  .description{font-size:.8rem;bottom:5px;}
+  h1{font-size:40px;}
 }
