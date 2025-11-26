@@ -1,0 +1,16 @@
+.custom-datepicker-container {
+  background: #F9F9FA;
+  border-radius: 16px;
+}
+
+.custom-datepicker-container input {
+  background: #F9F9FA !important;
+  border-radius: 16px;
+  height: 50px;
+  font-size: 15px;
+  color: #A2A0A8;
+}
+
+.custom-datepicker-container .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}

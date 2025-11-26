@@ -2,8 +2,12 @@ import React, { useRef, useState } from 'react'
 import "./index.css"
 import { TextField } from '@mui/material'
 import UploadIcon from "../../assets/UploadIcon.png"
+import CustomDatePicker from "../common/CustomDatePicker";
+
 const GstVerification = () => {
     const inputFile = useRef(null);
+    const [gstRegDate, setGstRegDate] = useState(null);
+
     const openFileDialog = (event) => {
         console.log("hello")
         event.preventDefault(); // Prevent default behavior of the label
@@ -37,11 +41,11 @@ const GstVerification = () => {
 
                     <div className='UploadDocContainer' >
                         <div className='uploadDocLabel'>
-                            <label htmlFor="FileUpload" style={{ width:"300px", display: "flex", alignItems: "center",justifyContent:"space-between", gap: "8px", background: "#F9F9FA"}}>
+                            <label htmlFor="FileUpload" style={{ width: "300px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", background: "#F9F9FA" }}>
                                 <p style={{ color: "#A2A0A8" }}>Upload GST Certificate </p>
                                 <img src={UploadIcon} />
                             </label>
-                            
+
                             <input
                                 type="file"
                                 id="FileUpload"
@@ -67,22 +71,22 @@ const GstVerification = () => {
                         }}
                         sx={{
                             fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                          }}
-                        />
+                        }}
+                    />
 
-        
+
                     <TextField id="outlined-basic" label="Address as per GST" variant="outlined"
                         InputProps={{
-                            style: {  borderRadius: 16,  color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA" }
+                            style: { borderRadius: 16, color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA" }
                         }}
                         InputLabelProps={{
                             style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
                         }} sx={{
                             fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                          }}
-                        />
+                        }}
+                    />
                     <TextField id="outlined-basic" label="Constitution Type" variant="outlined" InputProps={{
-                        style: {  borderRadius: 16, color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA", },
+                        style: { borderRadius: 16, color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA", },
                         // classes: classes.input
 
                     }}
@@ -90,24 +94,15 @@ const GstVerification = () => {
                             style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
                         }} sx={{
                             fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                          }}
-                        />
-
-                    <TextField id="outlined-basic" label="GST Registration Date" variant="outlined" InputProps={{
-                        style: { borderRadius: 16,  color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA" }
-                    }}
-                        InputLabelProps={{
-                            style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
                         }}
-                        sx={{
-                            fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                          }}
-                        />
-                    {/* <TextField id="outlined-basic" label="Address as per COI/MCA" variant="outlined" InputProps={{
-                        style: { height: 50, width: 250, background: "#ededf3" }
-                    }} InputLabelProps={{
-                        style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
-                    }} /> */}
+                    />
+
+                    <CustomDatePicker
+                        value={gstRegDate}
+                        onChange={setGstRegDate}
+                        label="GST Registration Date"
+                    />
+
 
                 </div>
             </form>

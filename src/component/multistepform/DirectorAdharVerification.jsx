@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import './index.css';
 import { TextField } from '@mui/material';
 import UploadIcon from '../../assets/UploadIcon.png';
+import CustomDatePicker from '../common/CustomDatePicker';
 
 const DirectorAdharVerification = () => {
     const adharFrontInputFile = useRef(null);
@@ -10,6 +11,8 @@ const DirectorAdharVerification = () => {
 
     const [adharFrontDocUrl, setAdharFrontDocUrl] = useState(null);
     const [adharBackDocUrl, setAdharBackDocUrl] = useState(null);
+
+    const [dob, setDob] = useState(null);
 
     const openAdharFrontFileDialog = (event) => {
         event.preventDefault();
@@ -53,14 +56,14 @@ const DirectorAdharVerification = () => {
         <div className='UploadCompanyVerify'>
             <form>
                 <div className='CertificateContainer'>
-                       {/* Aadhaar Front Verification */}
+                    {/* Aadhaar Front Verification */}
                     <div className='UploadAadhaarDocContainer'>
                         <div className='uniqueUploadAdhaarDocLabel' style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                             <label
                                 htmlFor="AdharFrontFileUpload"
-                                style={{ width:"300px", display: "flex", alignItems: "center",justifyContent:"space-between", gap: "8px", background: "#F9F9FA" }}
+                                style={{ width: "300px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", background: "#F9F9FA" }}
 
-                             
+
                                 onClick={openAdharFrontFileDialog}
                             >
                                 <p style={{ color: '#A2A0A8' }}>Upload Aadhaar Front</p>
@@ -73,13 +76,13 @@ const DirectorAdharVerification = () => {
                                 style={{ display: 'none' }}
                                 onChange={handleAdharFrontInputDoc}
                             />
-                           
+
                             <label
                                 htmlFor="AdharBackFileUpload"
-                                style={{ width:"300px", display: "flex", alignItems: "center",justifyContent:"space-between", gap: "8px", background: "#F9F9FA" }}
+                                style={{ width: "300px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", background: "#F9F9FA" }}
 
-                               
-                                
+
+
                             >
                                 <p style={{ color: '#A2A0A8' }}>Upload Aadhaar Back</p>
                                 <img src={UploadIcon} alt="Upload" />
@@ -91,32 +94,32 @@ const DirectorAdharVerification = () => {
                                 style={{ display: 'none' }}
                                 onChange={handleAdharBackInputDoc}
                             />
-                           
+
                         </div>
-   
+
 
 
 
                         {/* display photo down */}
                         <div className='uniqueAadharUploadedDoc' style={{ display: 'flex', gap: '3px' }}>
-                           
-                                <img
-                                    src={adharFrontDocUrl}
-                                   
-                                    
-                                />
-                           
-                           
-                                <img
-                                    src={adharBackDocUrl}
-                                  
-                                   
-                                />
-                           
+
+                            <img
+                                src={adharFrontDocUrl}
+
+
+                            />
+
+
+                            <img
+                                src={adharBackDocUrl}
+
+
+                            />
+
                         </div>
 
 
-                       
+
                     </div>
 
 
@@ -165,20 +168,12 @@ const DirectorAdharVerification = () => {
                         }}
                     />
 
-                    <TextField
-                        id="outlined-basic"
+                    <CustomDatePicker
+                        value={dob}
+                        onChange={setDob}
                         label="Date of Birth"
-                        variant="outlined"
-                        InputProps={{
-                            style: { borderRadius: 16, color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA" }
-                        }}
-                        InputLabelProps={{
-                            style: { fontSize: '0.8rem' }
-                        }}
-                        sx={{
-                            fieldset: { border: 'none' }
-                        }}
                     />
+
 
                     <TextField
                         id="outlined-basic"

@@ -2,10 +2,14 @@ import React, { useRef, useState } from 'react'
 import "./index.css"
 import { TextField } from '@mui/material'
 import UploadIcon from "../../assets/UploadIcon.png"
+import CustomDatePicker from "../common/CustomDatePicker";
+
 
 const DirectorKycVerfication = () => {
     const inputFile = useRef(null); // Create a ref for the file input
     const [docUrl, setDocUrl] = useState(null); // State to store the uploaded image
+    const [dob, setDob] = useState(null);
+
 
     const openFileDialog = (event) => {
         event.preventDefault();
@@ -32,10 +36,10 @@ const DirectorKycVerfication = () => {
                 <div className='CertificateContainer'>
                     <div className='UploadDocContainer' >
                         <div className='uploadDocLabel'>
-                            <label 
-                            htmlFor="FileUpload" 
-                            style={{ width:"300px", display: "flex", alignItems: "center",justifyContent:"space-between", gap: "8px", background: "#F9F9FA" }}>
-                                
+                            <label
+                                htmlFor="FileUpload"
+                                style={{ width: "300px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", background: "#F9F9FA" }}>
+
                                 <p style={{ color: "#A2A0A8" }}>Upload PAN</p>
                                 <img src={UploadIcon} alt="Upload Icon" />
                             </label>
@@ -71,7 +75,7 @@ const DirectorKycVerfication = () => {
                         }}
                         sx={{
                             fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                        }} 
+                        }}
                     />
 
                     <TextField id="outlined-basic" label="Name" variant="outlined"
@@ -80,23 +84,18 @@ const DirectorKycVerfication = () => {
                         }}
                         InputLabelProps={{
                             style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
-                        }} 
+                        }}
                         sx={{
                             fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                        }} 
+                        }}
                     />
 
-                    <TextField id="outlined-basic" label="Date of Birth" variant="outlined" 
-                        InputProps={{
-                            style: { borderRadius: 16, color: "#A2A0A8", height: 50, width: 250, background: "#F9F9FA" }
-                        }}
-                        InputLabelProps={{
-                            style: { fontSize: '0.8rem' }  // Adjust placeholder font size here
-                        }} 
-                        sx={{
-                            fieldset: { border: 'none' }  // This completely removes the border from the TextField
-                        }} 
+                    <CustomDatePicker
+                        value={dob}
+                        onChange={setDob}
+                        label="Date of Birth"
                     />
+
                 </div>
             </form>
         </div>
