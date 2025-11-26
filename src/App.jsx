@@ -20,15 +20,19 @@ function App() {
         <Route path="/" element={<HelloUser />} />
         <Route path="/forms" element={<Registration />} />
         <Route path="/video-kyc" element={<VideoKyc />} />
-        <Route path='verifydetails' element={<VerifyDetails/>} />
-        <Route path='/needkyc' element={<NeedKyc/>} />
-        <Route path='/merchant-type' element={<MerchantType/>} />
+        <Route path='verifydetails' element={<VerifyDetails />} />
+        <Route path='/needkyc' element={<NeedKyc />} />
+        <Route path='/merchant-type' element={<MerchantType />} />
 
-        <Route path='/partnership-flow' element={<PartnershipFlow/>} />
-        <Route path='/company-flow' element={<CompanyFlow/>} />
-        <Route path='/individual-flow' element={<IndividualFlow/>} />
-        <Route path='/trust-flow' element={<TrustFlow/>} />
-        
+        {/* Standalone pages */}
+        <Route path='/partnership-flow' element={<PartnershipFlow />} />
+        <Route path='/company-flow' element={<CompanyFlow />} />
+        <Route path='/individual-flow' element={<IndividualFlow />} />
+        <Route path='/trust-flow' element={<TrustFlow />} />
+
+        <Route path="/video-kyc" element={<VideoKyc />} />
+
+
       </Routes>
     </>
   );

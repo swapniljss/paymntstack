@@ -1,176 +1,240 @@
 .video-kyc-container {
   text-align: center;
-  font-family: 'Arial', sans-serif;
-  padding: 10px;
-  color: 
-  #F9F9FA;
-  border: 2px solid black!important;
+  font-family: 'Manrope', sans-serif;
+  padding: 0px;
+  color: #f9f9fa;
 }
 
+/* instruction text */
 .instruction-text {
   font-size: 16px;
-  color: #A1A0A8;
-  margin-bottom: 20px;
-  font-family: 'Manrope', sans-serif;
+  color: #a1a0a8;
+  margin-bottom: 1px;
 }
 
+/* webcam box wrapper */
 .video-selfie-container {
   width: 220px;
   height: 200px;
   border-radius: 12px;
   border: 0.75px solid #cccccc;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 12px auto;
   background-color: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* actual video */
 .video-stream {
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
 }
 
+/* subtle glow when listening */
+.video-stream-listening {
+  box-shadow: 0 0 0 2px #006d77;
+}
+
+/* MIC SECTION */
+.mic-section {
+  margin: 8px auto 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mic-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #006d77;
+  background-color: #ffffff;
+  color: #006d77;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.mic-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.mic-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mic-button-active {
+  background-color: #006d77;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 109, 119, 0.18);
+}
+
+.mic-icon {
+  font-size: 18px;
+}
+
+.mic-status-text {
+  font-size: 12px;
+  color: #a1a0a8;
+}
+
+/* random code display */
 .random-code {
   font-size: 24px;
   margin: 10px 0;
   letter-spacing: 8px;
   font-weight: bold;
   color: black;
-  border-radius: 16px;
-  
 }
 
+/* code input */
 .code-input-container {
-  margin: 20px 0;
-  width: 185px;
-  height: 45.9px;
+  margin: 20px auto;
+  width: 220px;
 }
 
 .code-input {
-  width: 311px !important;
-  height: 56px !important;
+  width: 100%;
+  height: 56px;
   font-size: 18px;
   text-align: center;
   border-radius: 16px;
-  border: 1px solid #cccccc;
-  margin: 0 auto;
-  padding: 5px;
-
-  margin-left: 150px;
- 
+  padding: 5px 10px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.code-input:focus {
+  outline: none !important;
+}
+.code-input {
+  transition: border 0.2s ease;
 }
 
+/* buttons */
 .video-kyc-button-group {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  margin-top: 10px;
 }
 
 .video-kyc-back-button,
 .video-kyc-submit-button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px; 
-  background-color: #006D77; 
+  border-radius: 5px;
+  background-color: #006d77;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  width: 120px; /* Adjust width to be consistent */
+  width: 120px;
 }
 
 .video-kyc-back-button:hover,
 .video-kyc-submit-button:hover {
-  background-color: #006D77; 
+  background-color: #006d77;
 }
-@media screen and (max-width: 767px){
-  
-.video-kyc-container {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    padding: 10px;
-    color: 
-    #F9F9FA;
-    /* margin-top: -50px; */
-  }
-  
-  .instruction-text {
-    font-size: 16px;
-    color: #A1A0A8;
-    margin-bottom: 20px;
-    font-family: 'Manrope', sans-serif;
-  }
-  
-  .video-selfie-container {
-    width: 220px;
-    height: 200px;
-    border-radius: 12px;
-    border: 0.75px solid #cccccc;
-    margin: 0 auto 20px auto;
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .video-stream {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-  
-  .random-code {
-    font-size: 24px;
-    margin: 10px 0;
-    letter-spacing: 8px;
-    font-weight: bold;
-    color: black;
-    border-radius: 16px;
-    
-  }
-  
-  .code-input-container {
-    margin: 20px 0;
-    width: 185px;
-    height: 45.9px;
-  }
-  
-  .code-input {
-    width: 311px;
-    height: 56px;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 16px;
-    border: 1px solid #cccccc;
-    margin: 0 auto;
-    padding: 5px;
 
-    margin-left: 20px;
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .video-kyc-container {
+    padding: 10px;
   }
-  
+
+  .video-selfie-container {
+    width: 100%;
+    max-width: 260px;
+    height: 220px;
+  }
+
+  .code-input-container {
+    width: 100%;
+    max-width: 260px;
+  }
+
   .video-kyc-button-group {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
   }
-  
-  .video-kyc-back-button,
-  .video-kyc-submit-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* Match border-radius with MOAVerification.css */
-    background-color: #006D77; /* Consistent with MOAVerification.css */
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    width: 120px; /* Adjust width to be consistent */
+}
+
+
+/* DESKTOP LAYOUT */
+.video-kyc-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+/* left */
+.kyc-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* right */
+.kyc-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .video-kyc-grid {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .video-kyc-back-button:hover,
-  .video-kyc-submit-button:hover {
-    background-color: #006D77; /* Darker shade for hover effect */
+
+  .kyc-left,
+  .kyc-right {
+    width: 100%;
   }
+}
+
+
+
+@media (min-width: 1100px) {
+  .kyc-left {
+    margin-top: -30px;
+  }
+  .kyc-right {
+    margin-top: 40px;
+  }
+}
+
+.kyc-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #006d77;
+  margin-bottom: 2px;
+}
+
+
+.code-input[readonly] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: black;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #cccccc;
+}
+
+.code-input {
+  caret-color: transparent;
 }
