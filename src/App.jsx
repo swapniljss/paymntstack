@@ -4,9 +4,9 @@ import './App.css';
 import HelloUser from './Pages/Login/HelloUser';
 import Registration from './Pages/Registration';
 import VideoKyc from './component/multistepform/VideoKyc';
-import VerifyDetails from './component/multistepform/VerifyDetails';
+import VerifyDetails from './Pages/VerifyDetails';
 import MerchantType from './Pages/MerchantType';
-import NeedKyc from './component/multistepform/NeedKyc';
+import NeedKyc from './Pages/NeedKyc';
 function App() {
   return (
     <>

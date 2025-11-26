@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './NeedKyc.css'; // Importing the CSS file for styling
 
 // Importing SVG images from the assets folder
-import kyc1 from '../../assets/kyc1.svg';
-import kyc2 from '../../assets/kyc2.svg';
-import kyc3 from '../../assets/kyc3.svg';
-import kyc4 from '../../assets/kyc4.svg';
-import kyc5 from '../../assets/kyc5.svg';
+import kyc1 from '../assets/kyc1.svg';
+import kyc2 from '../assets/kyc2.svg';
+import kyc3 from '../assets/kyc3.svg';
+import kyc4 from '../assets/kyc4.svg';
+import kyc5 from '../assets/kyc5.svg';
 
 const NeedKyc = () => {
     const navigate = useNavigate();
