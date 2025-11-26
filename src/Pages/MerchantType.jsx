@@ -10,7 +10,7 @@ const MerchantType = () => {
     const handleSelect = (type) => {
         switch (type) {
             case "individual":
-                navigate("/forms");
+                navigate("/individual-flow");
                 break;
             case "partnership":
                 navigate("/partnership-flow");
@@ -19,7 +19,7 @@ const MerchantType = () => {
                 navigate("/company-flow");
                 break;
             case "trust":
-                navigate("/multistepform");
+                navigate("/trust-flow");
                 break;
             default:
                 break;
