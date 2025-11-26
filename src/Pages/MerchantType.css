@@ -1,0 +1,75 @@
+.merchant-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden; /* remove scroll */
+  padding-top: 40px; /* optional fine tuning */
+}
+
+.merchant-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 48px;
+  font-weight: 700;
+  color: #175783;
+}
+
+.merchant-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  color: gray;
+}
+
+.merchant-btn {
+  background-color: #006D77;
+  color: white;
+  padding: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+  transition: 0.3s ease;
+}
+
+.merchant-btn:hover {
+  background-color: #008489;
+  transform: translateY(-4px);
+}
+
+.row > div {
+  margin-bottom: 15px; /* spacing between buttons */
+}
+
+@media (max-width: 576px) {
+  .merchant-title {
+    font-size: 36px;
+  }
+  .merchant-btn {
+    font-size: 17px;
+    padding: 14px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .merchant-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center vertically only here */
+    min-height: 100vh;
+    padding-top: 0;
+  }
+}
+
+
+.merchant-container {
+  min-height: 100dvh; 
+  overflow-y: hidden;
+  padding: 40px 0;
+}
+
+.merchant-container.container-fluid,
+.merchant-container .row {
+  margin: 0 !important;
+  padding: 0 !important;
+}

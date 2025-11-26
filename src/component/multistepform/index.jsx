@@ -12,7 +12,7 @@ import Logo from "../../assets/Logo.png";
 import { useNavigate } from 'react-router-dom';
 import VideoKyc from './VideoKyc';
 import KycComplete from './KycComplete';
-import TestVideokyc from './TestVideokyc';
+// import TestVideokyc from './TestVideokyc';
 import SplashScreen from './SplashScreen';
 
 const Multistep = () => {
