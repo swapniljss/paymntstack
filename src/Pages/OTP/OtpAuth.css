@@ -300,3 +300,23 @@ input::placeholder {
 .mobile-text {
   margin-left: 8px;
 }
+
+
+/* Same style as the input box */
+.input-group.disabled-input {
+    display: flex;
+    align-items: center;
+    background: #F7F7F7;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ededed;
+    font-size: 16px;
+    color: #175783;
+}
+
+/* Ensures text stays aligned like input placeholder */
+.mobile-display {
+    margin-left: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

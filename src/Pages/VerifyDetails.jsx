@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import './VerifyDetails.css'; // Assuming you'll save your CSS as VerifyDetails.css
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const VerifyDetails = () => {
   const [checked, setChecked] = useState(false); // Example for controlling the "Next" button
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const { mobile } = location.state || {};
+
 
   const handleNextClick = () => {
     if (checked) {
@@ -20,14 +25,13 @@ const VerifyDetails = () => {
 
       {/* Email and Mobile Display */}
       <div className="details-container">
-        <div className="detail-item">
+        {/* <div className="detail-item">
           <label>Email:</label>
           <span>xyz@gmail.com</span>
-        </div>
+        </div> */}
         <div className="detail-item">
           <label>Mobile:</label>
-          <span>1234567890</span>
-        </div>
+          <span>{mobile || "N/A"}</span>         </div>
       </div>
 
       {/* Checkbox Section */}

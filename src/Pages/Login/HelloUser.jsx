@@ -36,9 +36,11 @@ const HelloUser = () => {
         //         `https://lms.codemodulo.in/kavach/onboarding/v1/otp/${sessionId}`
         //     );
 
-            // STEP 3 → Move to OTP page with sessionId
-            // navigate("/otp", { state: { mobile, sessionId } });
-            navigate("/verifydetails", { state: { sessionId: "TEMP_SESSION_1234" } });
+        // STEP 3 → Move to OTP page with sessionId
+        // navigate("/otp", { state: { mobile, sessionId } });
+        // navigate("/otp", { state: { sessionId: "TEMP_SESSION_1234" } });
+        navigate("/otp", { state: { mobile } });
+
 
 
         // } catch (error) {
@@ -71,10 +73,24 @@ const HelloUser = () => {
                         <div className="input-group">
                             <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                         </div> */}
+                        <p style={{ color: "#bbb8b8ff", fontSize: "14px", marginBottom: "10px", marginTop: "-5px" }}>
+                            Enter your mobile number to receive the OTP
+                        </p>
 
                         <div className="input-group">
                             <i className="icon"><FaPhone /></i>
-                            <input type="text" placeholder="Mobile Number" onChange={(e) => setMobile(e.target.value)} />
+                            <input
+                                type="text"
+                                placeholder="Mobile Number"
+                                value={mobile}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (/^\d{0,10}$/.test(value)) {
+                                        setMobile(value);
+                                    }
+                                }}
+                            />
+
                         </div>
 
                         <button type="submit" className="login-button">Send OTP</button>

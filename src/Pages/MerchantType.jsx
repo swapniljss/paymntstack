@@ -5,21 +5,19 @@ import "./MerchantType.css";
 const MerchantType = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { sessionId } = location.state || {}; 
+    const { sessionId } = location.state || {};
 
     const handleSelect = (type) => {
         switch (type) {
             case "proprietor":
                 navigate("/proprietor-flow");
                 break;
-            case "partnership":
-                navigate("/partnership-flow");
-                break;
             case "private_ltd":
                 navigate("/company-flow");
                 break;
             case "trust":
-                navigate("/trust-flow");
+                navigate("/company-flow");
+                // navigate("/trust-flow");
                 break;
             default:
                 break;
