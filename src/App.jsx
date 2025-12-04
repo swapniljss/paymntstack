@@ -10,7 +10,7 @@ import MerchantType from './Pages/MerchantType';
 
 import PartnershipFlow from './component/standalonepages/PartnershipFlow';
 import CompanyFlow from './component/standalonepages/CompanyFlow';
-import IndividualFlow from './component/standalonepages/IndividualFlow';
+import ProprietorFlow from './component/standalonepages/ProprietorFlow';
 import TrustFlow from './component/standalonepages/TrustFlow';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         {/* Standalone pages */}
         <Route path='/partnership-flow' element={<PartnershipFlow />} />
         <Route path='/company-flow' element={<CompanyFlow />} />
-        <Route path='/individual-flow' element={<IndividualFlow />} />
+        <Route path='/proprietor-flow' element={<ProprietorFlow />} />
         <Route path='/trust-flow' element={<TrustFlow />} />
 
         <Route path="/video-kyc" element={<VideoKyc />} />

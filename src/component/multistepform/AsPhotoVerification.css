@@ -1,0 +1,99 @@
+/* Wrapper */
+.asphoto-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.asphoto-form {
+  width: 100%;
+}
+
+/* Upload Button */
+.upload-container {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 20px auto;
+}
+
+.upload-label {
+  width: 100%;
+  height: 48px;
+  background: #f9f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.upload-text {
+  margin: 0;
+  color: #a2a0a8;
+}
+
+.hidden-input {
+  display: none;
+}
+
+/* -------- Fixed 2 Box Grid -------- */
+.asphoto-grid {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Box Style */
+.asphoto-box {
+  width: 100%;
+  height: 140px;
+  background: #f9f9fa;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Remove button */
+.remove-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .asphoto-box {
+    height: 120px;
+  }
+}
+
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* SAME AS MOA */
+  border-radius: 12px; /* match the rounded box */
+}

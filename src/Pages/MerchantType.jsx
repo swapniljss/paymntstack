@@ -9,8 +9,8 @@ const MerchantType = () => {
 
     const handleSelect = (type) => {
         switch (type) {
-            case "individual":
-                navigate("/individual-flow");
+            case "proprietor":
+                navigate("/proprietor-flow");
                 break;
             case "partnership":
                 navigate("/partnership-flow");
@@ -43,16 +43,16 @@ const MerchantType = () => {
                     <div className="row g-4 justify-content-center mt-4">
 
                         <div className="col-12 col-md-5 d-grid">
-                            <button className="merchant-btn" onClick={() => handleSelect("individual")}>
-                                Individuals / Self Employed
+                            <button className="merchant-btn" onClick={() => handleSelect("proprietor")}>
+                                Proprietor
                             </button>
                         </div>
 
-                        <div className="col-12 col-md-5 d-grid">
+                        {/* <div className="col-12 col-md-5 d-grid">
                             <button className="merchant-btn" onClick={() => handleSelect("partnership")}>
                                 Partnership Firm
                             </button>
-                        </div>
+                        </div> */}
 
                         <div className="col-12 col-md-5 d-grid">
                             <button className="merchant-btn" onClick={() => handleSelect("private_ltd")}>
@@ -62,7 +62,7 @@ const MerchantType = () => {
 
                         <div className="col-12 col-md-5 d-grid">
                             <button className="merchant-btn" onClick={() => handleSelect("trust")}>
-                                Trust / NGO / Society
+                                LLP
                             </button>
                         </div>
 

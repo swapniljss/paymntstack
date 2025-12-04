@@ -12,16 +12,22 @@ import KycComplete from "../multistepform/KycComplete";
 import Logo from "../../assets/Logo.png";
 import { Button } from "@mui/material";
 import "../multistepform/index.css";
+import AsPhotoVerification from "../multistepform/AsPhotoVerification";
+import OfficeBusinessPhoto from "../multistepform/OfficeBusinessPhoto";
+import ASPanCard from "../multistepform/ASPanCard";
 
 export default function CompanyFlow() {
   const steps = [
+    { title: "Company Verification", component: <Company /> },
     { title: "Company PAN Verification", component: <CompanyPanVerification /> },
     { title: "GST Verification", component: <GstVerification /> },
     { title: "MOA Verification", component: <MoaVerfication /> },
-    { title: "AOA Verification", component: <Company /> },
     { title: "Bank Account Verification", component: <BankAccount /> },
-    { title: "Director Aadhaar Verification", component: <DirectorAdharVerification /> },
-    { title: "Video KYC", component: <VideoKyc /> },
+    {title: "Authorized Signatory Pan Card", component: <ASPanCard/>},
+    { title: "Authorized Signatory Aadhaar Verification", component: <DirectorAdharVerification /> },
+    { title: "Authorized Signatory Photo", component: <AsPhotoVerification /> },
+    { title: "Authorized Signatory Video KYC", component: <VideoKyc /> },
+    { title: "Office/Business Photos", component: <OfficeBusinessPhoto /> },
     { title: "KYC Complete", component: <KycComplete /> },
   ];
 
@@ -31,7 +37,6 @@ export default function CompanyFlow() {
     <div className="MainContainer">
       <div className="DocumnetFormCont">
 
-        {/* HEADER */}
         <div className="DocumentHeader">
           <div className="DocumentHeadingText">
             <p>On Boarding Verification</p>
@@ -41,7 +46,6 @@ export default function CompanyFlow() {
           </div>
         </div>
 
-        {/* STEP INDICATOR */}
         <div className="PagesContainer">
           {steps.map((_, i) => (
             <button
@@ -54,17 +58,14 @@ export default function CompanyFlow() {
           ))}
         </div>
 
-        {/* TITLE */}
         <div className="DocumentHeadingTitle">
           <p>{steps[index].title}</p>
         </div>
 
-        {/* PAGE CONTENT */}
         <div className="FormContainer">
           {steps[index].component}
         </div>
 
-        {/* BUTTONS */}
         <div className="ButtonContainer">
           {index > 0 && (
             <Button className="MultistepBtn" onClick={() => setIndex(index - 1)}>

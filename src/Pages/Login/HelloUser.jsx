@@ -64,13 +64,13 @@ const HelloUser = () => {
                     <h1><span style={{ color: '#175783' }}>Welcome to Paymnt</span> <span style={{ color: '#FFC700' }}>Stack</span></h1>
 
                     <form onSubmit={handleSubmit}>
-                        <div className="input-group">
+                        {/* <div className="input-group">
                             <input type="text" placeholder="Full Name" onChange={(e) => setName(e.target.value)} />
                         </div>
 
                         <div className="input-group">
                             <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                        </div>
+                        </div> */}
 
                         <div className="input-group">
                             <i className="icon"><FaPhone /></i>
