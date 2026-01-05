@@ -37,7 +37,6 @@ const MerchantType = () => {
                     <p className="merchant-subtitle mb-5">
                         Choose your business category to proceed with onboarding
                     </p>
-
                     <div className="row g-4 justify-content-center mt-4">
 
                         <div className="col-12 col-md-5 d-grid">
